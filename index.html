@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BALAM HOUSE — Panadería artesanal, café, cocteles y música en vivo en Ciudad de México" />
+  <title>BALAM HOUSE — Panadería · Café · Tragos · Música · CDMX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-main">BALAM</span>
+        <span class="logo-sub">HOUSE</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#events">Eventos</a></li>
+        <li><a href="#gallery">Galería</a></li>
+        <li><a href="#location">Visítanos</a></li>
+        <li><a href="#location" class="nav-cta">Reservar</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-grain"></div>
+      <div class="hero-color-leak"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge reveal">CDMX &nbsp;·&nbsp; EST. 2024</div>
+        <h1 class="hero-title">
+          <span class="ht-main reveal">BALAM</span>
+          <span class="ht-sub reveal">HOUSE</span>
+        </h1>
+        <p class="hero-tagline reveal">Panadería artesanal &nbsp;·&nbsp; Café &nbsp;·&nbsp; Tragos &nbsp;·&nbsp; Música</p>
+        <div class="hero-cta reveal">
+          <a href="#menu" class="btn btn-primary">Ver Menú</a>
+          <a href="#location" class="btn btn-ghost">Reservar Mesa</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-bar"></div>
+      </div>
+    </section>
+
+    <!-- ===== 2. ABOUT ===== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-text">
+            <span class="section-label reveal">Nuestra Historia</span>
+            <h2 class="section-title reveal">Un espacio donde<br><em>todo sucede</em></h2>
+            <p class="about-copy reveal">
+              Cada mañana, el aroma del pan recién horneado llena nuestros espacios.
+              Comenzamos el día con panes artesanales y café de especialidad,
+              para después transformarnos en el mejor spot de brunch de la colonia.
+            </p>
+            <p class="about-copy reveal">
+              Cuando cae la noche, Balam se convierte en algo diferente: cocteles
+              de autor, música en vivo y DJs que curan los mejores sets desde nuestra
+              terraza en el rooftop de Roma Norte.
+            </p>
+            <div class="about-features reveal">
+              <div class="af-item"><i class="fas fa-bread-slice"></i><span>Pan artesanal diario</span></div>
+              <div class="af-item"><i class="fas fa-mug-hot"></i><span>Café de especialidad</span></div>
+              <div class="af-item"><i class="fas fa-martini-glass"></i><span>Cocteles de autor</span></div>
+              <div class="af-item"><i class="fas fa-music"></i><span>Música en vivo</span></div>
+            </div>
+          </div>
+
+          <div class="about-visual reveal">
+            <div class="about-img-main">
+              <div class="about-img" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80')"></div>
+            </div>
+            <div class="about-img-accent">
+              <div class="about-img" style="background-image:url('https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=400&q=80')"></div>
+            </div>
+            <div class="about-stat-card">
+              <div class="stat"><span class="stat-n">6</span><span class="stat-l">Años</span></div>
+              <div class="stat"><span class="stat-n">4.4★</span><span class="stat-l">Rating</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. MENU PREVIEW ===== -->
+    <section class="menu" id="menu">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Lo que servimos</span>
+          <h2 class="section-title">Nuestro <em>Menú</em></h2>
+        </div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-card reveal">
+          <div class="mc-img" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80')"></div>
+          <div class="mc-body">
+            <span class="mc-tag">Panadería</span>
+            <h3 class="mc-title">Panes Artesanales</h3>
+            <p class="mc-items">Croissants · Danesas · Masa madre · Bizcochos de temporada</p>
+            <span class="mc-price">Desde $45</span>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <div class="mc-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80')"></div>
+          <div class="mc-body">
+            <span class="mc-tag">Desayunos</span>
+            <h3 class="mc-title">Buenos Días</h3>
+            <p class="mc-items">Huevos benedictinos · Avocado toast · Chilaquiles del chef</p>
+            <span class="mc-price">Desde $120</span>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <div class="mc-img" style="background-image:url('https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=700&q=80')"></div>
+          <div class="mc-body">
+            <span class="mc-tag">Cocteles</span>
+            <h3 class="mc-title">Tragos de Autor</h3>
+            <p class="mc-items">Mezcal Balam · Rosa de Tepito · Coctelería de temporada</p>
+            <span class="mc-price">Desde $180</span>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <div class="mc-img" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80')"></div>
+          <div class="mc-body">
+            <span class="mc-tag">Bebidas</span>
+            <h3 class="mc-title">Café &amp; Más</h3>
+            <p class="mc-items">Espresso · Matcha latte · Cold brew · Aguas frescas de la casa</p>
+            <span class="mc-price">Desde $65</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-cta reveal">
+        <a href="#" class="btn btn-outline">Ver Menú Completo</a>
+      </div>
+    </section>
+
+    <!-- ===== 4. GALLERY ===== -->
+    <section class="gallery" id="gallery">
+      <div class="gallery-header">
+        <span class="section-label reveal">Galería</span>
+        <h2 class="section-title reveal">Sígenos en <em>Instagram</em></h2>
+        <a href="https://instagram.com" class="ig-handle reveal" target="_blank" rel="noopener">@balamhouse.cdmx</a>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gi gi-large reveal">
+          <div class="gi-img" style="background-image:url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="gi-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="gi reveal">
+          <div class="gi-img" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=80')"></div>
+          <div class="gi-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="gi reveal">
+          <div class="gi-img" style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=500&q=80')"></div>
+          <div class="gi-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="gi reveal">
+          <div class="gi-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=80')"></div>
+          <div class="gi-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="gi reveal">
+          <div class="gi-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=80')"></div>
+          <div class="gi-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="gi gi-tall reveal">
+          <div class="gi-img" style="background-image:url('https://images.unsplash.com/photo-1519999482648-25049ddd37b1?auto=format&fit=crop&w=500&q=80')"></div>
+          <div class="gi-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="gi reveal">
+          <div class="gi-img" style="background-image:url('https://images.unsplash.com/photo-1514362773776-a1ffc14aeb73?auto=format&fit=crop&w=500&q=80')"></div>
+          <div class="gi-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="gi reveal">
+          <div class="gi-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80')"></div>
+          <div class="gi-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. EVENTS / LIVE MUSIC ===== -->
+    <section class="events" id="events">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label neon-pink">Próximos Eventos</span>
+          <h2 class="section-title events-hed">MÚSICA<br><em>EN VIVO</em></h2>
+        </div>
+
+        <div class="events-grid">
+          <!-- Featured poster -->
+          <div class="poster poster-featured reveal">
+            <div class="poster-stripes"></div>
+            <div class="poster-inner">
+              <div class="poster-date">
+                <span class="pd-day">VIE</span>
+                <span class="pd-num">26</span>
+                <span class="pd-mon">ABR</span>
+              </div>
+              <div class="poster-body">
+                <span class="poster-type">DJ SET</span>
+                <h3 class="poster-artist">NOCHE<br>MEZCAL</h3>
+                <p class="poster-desc">DJ Balam · Electronic · Afro House</p>
+                <span class="poster-time">10PM → 3AM</span>
+              </div>
+              <span class="poster-badge">FREE ENTRY</span>
+            </div>
+          </div>
+
+          <div class="poster poster-red reveal">
+            <div class="poster-stripes"></div>
+            <div class="poster-inner">
+              <div class="poster-date">
+                <span class="pd-day">SÁB</span>
+                <span class="pd-num">27</span>
+                <span class="pd-mon">ABR</span>
+              </div>
+              <div class="poster-body">
+                <span class="poster-type">LIVE MUSIC</span>
+                <h3 class="poster-artist">JAZZ &amp;<br>MEZCAL</h3>
+                <p class="poster-desc">Trío de jazz · Latin · Bossa Nova</p>
+                <span class="poster-time">9PM → 1AM</span>
+              </div>
+              <span class="poster-badge badge-pink">ROOFTOP</span>
+            </div>
+          </div>
+
+          <div class="poster poster-green reveal">
+            <div class="poster-stripes"></div>
+            <div class="poster-inner">
+              <div class="poster-date">
+                <span class="pd-day">DOM</span>
+                <span class="pd-num">28</span>
+                <span class="pd-mon">ABR</span>
+              </div>
+              <div class="poster-body">
+                <span class="poster-type">BRUNCH</span>
+                <h3 class="poster-artist">DOMINGO<br>BALAM</h3>
+                <p class="poster-desc">Brunch · Acústico · Buenos tragos</p>
+                <span class="poster-time">11AM → 6PM</span>
+              </div>
+              <span class="poster-badge badge-green">NUEVO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="weekly reveal">
+          <h3 class="weekly-title">Programación semanal</h3>
+          <div class="weekly-grid">
+            <div class="wi"><span class="wi-day">Lun — Mié</span><span class="wi-desc">Open Bar · House Music</span></div>
+            <div class="wi"><span class="wi-day">Jueves</span><span class="wi-desc">Jazz Night · Cocteles especiales</span></div>
+            <div class="wi"><span class="wi-day">Viernes</span><span class="wi-desc">DJ Set · Afro House · Electronic</span></div>
+            <div class="wi"><span class="wi-day">Sábado</span><span class="wi-desc">Live Band · Latin Fusion · DJ after</span></div>
+            <div class="wi"><span class="wi-day">Domingo</span><span class="wi-desc">Brunch Balam · Acústico · Chill</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. EXPERIENCE ===== -->
+    <section class="experience" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">La Experiencia</span>
+          <h2 class="section-title">Por qué <em>Balam House</em></h2>
+        </div>
+        <div class="exp-grid">
+          <div class="exp-card reveal">
+            <div class="exp-icon"><i class="fas fa-building"></i></div>
+            <h3 class="exp-title">Rooftop Experience</h3>
+            <p class="exp-desc">Vistas únicas de la ciudad desde nuestra terraza. El lugar perfecto para cada hora del día.</p>
+          </div>
+          <div class="exp-card reveal">
+            <div class="exp-icon"><i class="fas fa-martini-glass"></i></div>
+            <h3 class="exp-title">Cocteles de Autor</h3>
+            <p class="exp-desc">Nuestros bartenders crean experiencias con mezcal, tequila y destilados artesanales mexicanos.</p>
+          </div>
+          <div class="exp-card reveal">
+            <div class="exp-icon"><i class="fas fa-music"></i></div>
+            <h3 class="exp-title">Música en Vivo</h3>
+            <p class="exp-desc">De jazz al amanecer a electronic al caer la noche. Cada día una experiencia sonora diferente.</p>
+          </div>
+          <div class="exp-card reveal">
+            <div class="exp-icon"><i class="fas fa-bread-slice"></i></div>
+            <h3 class="exp-title">Pan de Cada Día</h3>
+            <p class="exp-desc">Horneamos cada mañana. Masa madre, croissants y panes de temporada hechos con amor artesanal.</p>
+          </div>
+          <div class="exp-card reveal">
+            <div class="exp-icon"><i class="fas fa-sun"></i></div>
+            <h3 class="exp-title">Desayunos Únicos</h3>
+            <p class="exp-desc">El mejor momento del día merece el mejor café y un menú que mezcla México con lo contemporáneo.</p>
+          </div>
+          <div class="exp-card reveal">
+            <div class="exp-icon"><i class="fas fa-heart"></i></div>
+            <h3 class="exp-title">Comunidad</h3>
+            <p class="exp-desc">Punto de encuentro para artistas, creativos y noctámbulos de la Ciudad de México.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. LOCATION & INFO ===== -->
+    <section class="location" id="location">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Encuéntranos</span>
+          <h2 class="section-title">Visítanos en <em>CDMX</em></h2>
+        </div>
+        <div class="location-grid">
+
+          <div class="loc-info reveal">
+            <div class="info-row">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4 class="info-label">Dirección</h4>
+                <p class="info-val">Álvaro Obregón 123, Col. Roma Norte<br>Ciudad de México, CDMX 06700</p>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4 class="info-label">Teléfono / WhatsApp</h4>
+                <p class="info-val">+52 55 1234 5678</p>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h4 class="info-label">Horarios</h4>
+                <div class="hours">
+                  <div class="hr"><span>Lun — Vie</span><span class="hr-time">8:00 AM — 2:00 AM</span></div>
+                  <div class="hr"><span>Sábado</span><span class="hr-time">9:00 AM — 3:00 AM</span></div>
+                  <div class="hr"><span>Domingo</span><span class="hr-time">10:00 AM — 9:00 PM</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4 class="info-label">Reservaciones</h4>
+                <p class="info-val">hola@balamhouse.mx</p>
+              </div>
+            </div>
+            <a href="mailto:hola@balamhouse.mx" class="btn btn-primary loc-btn">Reservar Ahora</a>
+          </div>
+
+          <div class="loc-map reveal">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.094!2d-99.1640!3d19.4186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff352b8cde81%3A0x27e6f1cfd10a4174!2sRoma%20Norte%2C%20Ciudad%20de%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1682400000000"
+              width="100%" height="460" style="border:0" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Mapa Balam House"></iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. REVIEWS ===== -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Lo que dicen</span>
+          <h2 class="section-title"><em>4.4★</em> en Google</h2>
+          <div class="rating-row reveal">
+            <div class="stars-big">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="rating-count">Basado en +320 reseñas</span>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="rv-card reveal">
+            <div class="rv-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="rv-text">"El mejor lugar para empezar el fin de semana. El croissant de mantequilla es de otro nivel y el mezcal sour de la casa es adictivo. Ya es nuestro spot favorito en Roma."</p>
+            <div class="rv-author">
+              <div class="rv-avatar">MC</div>
+              <div>
+                <span class="rv-name">María Castillo</span>
+                <span class="rv-source">Google Reviews</span>
+              </div>
+            </div>
+          </div>
+          <div class="rv-card reveal">
+            <div class="rv-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="rv-text">"Vine por el café y me quedé hasta el amanecer. El DJ set del viernes es brutal, la vibra es increíble. No se lo pueden perder si vienen a la CDMX."</p>
+            <div class="rv-author">
+              <div class="rv-avatar">JR</div>
+              <div>
+                <span class="rv-name">Jorge Ramírez</span>
+                <span class="rv-source">Google Reviews</span>
+              </div>
+            </div>
+          </div>
+          <div class="rv-card reveal">
+            <div class="rv-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="rv-text">"Como turista buscando algo auténtico en CDMX, Balam fue un descubrimiento increíble. El rooftop con vistas a la ciudad mientras escuchas jazz en vivo es mágico."</p>
+            <div class="rv-author">
+              <div class="rv-avatar">SL</div>
+              <div>
+                <span class="rv-name">Sofia Laurent</span>
+                <span class="rv-source">TripAdvisor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 9. FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+
+          <div class="footer-brand">
+            <a href="#hero" class="footer-logo">
+              <span class="fl-main">BALAM</span>
+              <span class="fl-sub">HOUSE</span>
+            </a>
+            <p class="footer-tagline">Panadería artesanal · Café · Tragos · Música</p>
+            <p class="footer-addr">Roma Norte · Ciudad de México</p>
+            <div class="social-links">
+              <a href="#" class="sl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="sl" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" class="sl" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="sl" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4>Explorar</h4>
+            <ul>
+              <li><a href="#about">Nosotros</a></li>
+              <li><a href="#menu">Menú</a></li>
+              <li><a href="#events">Eventos</a></li>
+              <li><a href="#gallery">Galería</a></li>
+              <li><a href="#reviews">Reseñas</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Visítanos</h4>
+            <ul>
+              <li><a href="#location">Reservaciones</a></li>
+              <li><a href="#">Eventos privados</a></li>
+              <li><a href="#">Prensa</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-newsletter">
+            <h4>Mantente al día</h4>
+            <p>Sé el primero en saber sobre eventos y nuevos menús.</p>
+            <form class="nl-form" id="nlForm">
+              <input type="email" class="nl-input" placeholder="tu@email.com" required />
+              <button type="submit" class="nl-btn" aria-label="Suscribirse">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 Balam House CDMX. Todos los derechos reservados.</p>
+        <p>Hecho con amor en México 🇲🇽</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
