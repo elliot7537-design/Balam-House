@@ -536,9 +536,9 @@ section { position:relative; overflow:hidden; }
 /* ===========================================
    MENU / WHAT WE SERVE — Instagram Style
    =========================================== */
-.menu { padding:9rem 0 5rem; background:var(--bg2); border-top:1px solid var(--border); }
+.menu { padding:9rem 0 5rem; background:var(--bg); border-top:1px solid var(--border); }
 
-/* Story highlights — category navigation */
+/* Category filter circles */
 .ig-highlights {
   display:flex;
   gap:2rem;
@@ -547,6 +547,7 @@ section { position:relative; overflow:hidden; }
   padding-bottom:.5rem;
 }
 .ig-highlights::-webkit-scrollbar { display:none; }
+
 .ig-highlight {
   display:flex;
   flex-direction:column;
@@ -554,42 +555,81 @@ section { position:relative; overflow:hidden; }
   gap:.6rem;
   cursor:pointer;
   flex-shrink:0;
+  transition:opacity .25s ease;
 }
+.ig-highlight.inactive { opacity:.35; }
+
 .ig-hl-ring {
   width:72px; height:72px;
   border-radius:50%;
   padding:2.5px;
-  background:linear-gradient(135deg, var(--orange), var(--pink), var(--green));
-  transition:transform .3s ease;
+  background:rgba(100,150,220,.22);
+  transition:background .3s ease, transform .3s ease;
 }
-.ig-highlight:hover .ig-hl-ring { transform:scale(1.08); }
+.ig-highlight.active .ig-hl-ring,
+.ig-highlight:hover .ig-hl-ring {
+  background:linear-gradient(135deg, var(--orange), var(--pink), var(--green));
+  transform:scale(1.06);
+}
+
 .ig-hl-img {
   width:100%; height:100%;
   border-radius:50%;
   background-size:cover;
   background-position:center;
-  border:2.5px solid var(--bg2);
+  border:2.5px solid var(--bg);
 }
+
+/* "All" circle — icon instead of photo */
+.ig-hl-all {
+  width:100%; height:100%;
+  border-radius:50%;
+  background:var(--bg);
+  border:2.5px solid var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--orange);
+  font-size:1rem;
+}
+
 .ig-highlight > span {
   font-size:.58rem;
   font-weight:700;
   letter-spacing:.12em;
   text-transform:uppercase;
   color:var(--text-d);
+  transition:color .25s ease;
 }
+.ig-highlight.active > span { color:var(--orange); }
 
-/* Post feed grid */
-.ig-feed {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:3px;
+/* Carousel wrapper */
+.ig-carousel-wrap {
+  position:relative;
   margin-bottom:3rem;
 }
+.ig-carousel {
+  display:flex;
+  gap:3px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+  cursor:grab;
+  transition:opacity .2s ease;
+}
+.ig-carousel::-webkit-scrollbar { display:none; }
+.ig-carousel.is-dragging { cursor:grabbing; scroll-snap-type:none; }
+
+/* Each post — 3 visible on desktop */
 .ig-post {
-  position:relative;
+  flex:0 0 calc(33.333% - 2px);
   aspect-ratio:1 / 1;
+  position:relative;
   overflow:hidden;
   cursor:pointer;
+  scroll-snap-align:start;
+  flex-shrink:0;
 }
 .ig-post-img {
   width:100%; height:100%;
@@ -599,7 +639,7 @@ section { position:relative; overflow:hidden; }
 }
 .ig-post:hover .ig-post-img { transform:scale(1.06); }
 
-/* Always-visible bottom label — category + price */
+/* Always-visible bottom label */
 .ig-post-label {
   position:absolute;
   bottom:0; left:0; right:0;
@@ -662,6 +702,30 @@ section { position:relative; overflow:hidden; }
   letter-spacing:.1em;
   color:var(--orange);
 }
+
+/* Arrow nav buttons */
+.ig-arrow {
+  position:absolute;
+  top:50%; transform:translateY(-50%);
+  width:44px; height:44px;
+  border-radius:50%;
+  border:1px solid var(--border-l);
+  background:rgba(2,8,20,.85);
+  backdrop-filter:blur(8px);
+  color:var(--text);
+  font-size:.85rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:10;
+  opacity:.7;
+  transition:background .25s ease, border-color .25s ease, opacity .25s ease;
+}
+.ig-arrow:hover { background:var(--orange); border-color:var(--orange); opacity:1; }
+.ig-arrow:disabled { opacity:.15; pointer-events:none; }
+.ig-prev { left:1rem; }
+.ig-next { right:1rem; }
 
 .menu-cta { text-align:center; padding-bottom:4rem; }
 
@@ -1437,6 +1501,7 @@ section { position:relative; overflow:hidden; }
   .hamburger { display:flex; }
 
   .ig-highlights { gap:1.25rem; }
+  .ig-post { flex:0 0 calc(50% - 1.5px); }
 
   .events-grid { grid-template-columns:1fr; }
   .poster-featured { grid-column:span 1; }
@@ -1462,6 +1527,8 @@ section { position:relative; overflow:hidden; }
 
 @media (max-width:520px) {
   .container { padding:0 1.25rem; }
+  .ig-post { flex:0 0 84%; }
+  .ig-highlights { gap:1rem; }
 
   .gallery-grid {
     grid-template-columns:repeat(2,1fr);
