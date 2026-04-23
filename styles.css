@@ -538,58 +538,11 @@ section { position:relative; overflow:hidden; }
    =========================================== */
 .menu { padding:9rem 0 5rem; background:var(--bg2); border-top:1px solid var(--border); }
 
-/* Profile header */
-.ig-profile {
-  display:flex;
-  align-items:center;
-  gap:4rem;
-  margin-bottom:3rem;
-  padding-bottom:2.5rem;
-  border-bottom:1px solid var(--border);
-}
-.ig-avatar-wrap { flex-shrink:0; }
-.ig-avatar-ring {
-  width:100px; height:100px;
-  border-radius:50%;
-  padding:3px;
-  background:linear-gradient(135deg, var(--orange), var(--pink), var(--green));
-}
-.ig-avatar {
-  width:100%; height:100%;
-  border-radius:50%;
-  background:var(--bg);
-  border:3px solid var(--bg2);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:'Bebas Neue', cursive;
-  font-size:1.8rem;
-  letter-spacing:.1em;
-  color:var(--orange);
-}
-.ig-username-row {
-  display:flex;
-  align-items:center;
-  gap:.6rem;
-  margin-bottom:1rem;
-}
-.ig-username {
-  font-family:'Space Grotesk', sans-serif;
-  font-size:1.4rem;
-  font-weight:600;
-  color:var(--text);
-}
-.ig-verified { color:var(--orange); font-size:.95rem; }
-.ig-meta { display:flex; gap:2rem; margin-bottom:1rem; }
-.ig-meta span { font-size:.875rem; color:var(--text-d); }
-.ig-meta strong { font-weight:700; color:var(--text); }
-.ig-bio { font-size:.875rem; line-height:1.75; color:var(--text-d); }
-
-/* Story highlights */
+/* Story highlights — category navigation */
 .ig-highlights {
   display:flex;
-  gap:1.5rem;
-  margin-bottom:3.5rem;
+  gap:2rem;
+  margin-bottom:4rem;
   overflow-x:auto;
   padding-bottom:.5rem;
 }
@@ -598,7 +551,7 @@ section { position:relative; overflow:hidden; }
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:.55rem;
+  gap:.6rem;
   cursor:pointer;
   flex-shrink:0;
 }
@@ -620,7 +573,7 @@ section { position:relative; overflow:hidden; }
 .ig-highlight > span {
   font-size:.58rem;
   font-weight:700;
-  letter-spacing:.1em;
+  letter-spacing:.12em;
   text-transform:uppercase;
   color:var(--text-d);
 }
@@ -645,41 +598,70 @@ section { position:relative; overflow:hidden; }
   transition:transform .65s ease;
 }
 .ig-post:hover .ig-post-img { transform:scale(1.06); }
+
+/* Always-visible bottom label — category + price */
+.ig-post-label {
+  position:absolute;
+  bottom:0; left:0; right:0;
+  z-index:1;
+  padding:.85rem 1.1rem;
+  background:linear-gradient(to top, rgba(2,8,20,.92) 0%, transparent 100%);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:opacity .3s ease;
+}
+.ig-post:hover .ig-post-label { opacity:0; }
+
+.ig-post-tag {
+  font-size:.55rem;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--orange);
+}
+.ig-post-price {
+  font-size:.65rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  color:var(--cream-d);
+}
+
+/* Hover overlay — full menu details */
 .ig-post-overlay {
   position:absolute;
   inset:0;
-  background:rgba(2,8,20,.75);
+  z-index:2;
+  background:linear-gradient(to top, rgba(2,8,20,.97) 0%, rgba(2,8,20,.7) 55%, rgba(2,8,20,.15) 100%);
   display:flex;
   flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  gap:1rem;
-  padding:1.5rem;
+  justify-content:flex-end;
+  padding:1.4rem 1.25rem;
   opacity:0;
   transition:opacity .35s ease;
 }
 .ig-post:hover .ig-post-overlay { opacity:1; }
-.ig-post-meta { display:flex; gap:1.5rem; }
-.ig-post-meta span {
-  display:flex;
-  align-items:center;
-  gap:.4rem;
-  font-size:1rem;
-  font-weight:700;
-  color:#fff;
+
+.ig-post-title {
+  font-family:'Bebas Neue', cursive;
+  font-size:1.55rem;
+  letter-spacing:.04em;
+  line-height:1;
+  color:var(--text);
+  margin-bottom:.4rem;
 }
-.ig-post-meta .fa-heart { color:var(--pink); }
-.ig-post-info { text-align:center; }
-.ig-post-tag {
-  display:inline-block;
-  font-size:.58rem;
+.ig-post-items {
+  font-size:.72rem;
+  line-height:1.55;
+  color:var(--text-d);
+  margin-bottom:.6rem;
+}
+.ig-post-price-big {
+  font-size:.72rem;
   font-weight:700;
-  letter-spacing:.22em;
-  text-transform:uppercase;
+  letter-spacing:.1em;
   color:var(--orange);
-  margin-bottom:.3rem;
 }
-.ig-post-caption { font-size:.78rem; color:rgba(255,255,255,.8); }
 
 .menu-cta { text-align:center; padding-bottom:4rem; }
 
@@ -1454,9 +1436,7 @@ section { position:relative; overflow:hidden; }
   .nav-links a { font-size:1.1rem; }
   .hamburger { display:flex; }
 
-  .ig-profile { flex-direction:column; gap:1.5rem; text-align:center; }
-  .ig-meta { justify-content:center; }
-  .ig-highlights { justify-content:flex-start; }
+  .ig-highlights { gap:1.25rem; }
 
   .events-grid { grid-template-columns:1fr; }
   .poster-featured { grid-column:span 1; }
