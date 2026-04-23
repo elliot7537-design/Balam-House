@@ -330,19 +330,16 @@ function applyLanguage(lang) {
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc && t['meta.desc']) metaDesc.setAttribute('content', t['meta.desc']);
 
-  const btn = document.getElementById('langToggle');
-  if (btn) {
-    btn.textContent = lang === 'es' ? 'EN' : 'ES';
-    btn.setAttribute('aria-label', lang === 'es' ? 'Switch to English' : 'Cambiar a Español');
-  }
+  document.querySelectorAll('.ls-opt').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('lang') || 'es';
   applyLanguage(savedLang);
 
-  document.getElementById('langToggle')?.addEventListener('click', () => {
-    const current = localStorage.getItem('lang') || 'es';
-    applyLanguage(current === 'es' ? 'en' : 'es');
+  document.querySelectorAll('.ls-opt').forEach(btn => {
+    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
   });
 });
