@@ -23,14 +23,15 @@
         <span class="logo-sub">HOUSE</span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">Nosotros</a></li>
-        <li><a href="#menu">Menú</a></li>
-        <li><a href="#events">Eventos</a></li>
-        <li><a href="#gallery">Galería</a></li>
-        <li><a href="#location">Visítanos</a></li>
-        <li><a href="#location" class="nav-cta">Reservar</a></li>
+        <li><a href="#about" data-i18n="nav.about">Nosotros</a></li>
+        <li><a href="#menu" data-i18n="nav.menu">Menú</a></li>
+        <li><a href="#events" data-i18n="nav.events">Eventos</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">Galería</a></li>
+        <li><a href="#location" data-i18n="nav.visit">Visítanos</a></li>
+        <li><a href="#location" class="nav-cta" data-i18n="nav.reserve">Reservar</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch to English">EN</button>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" data-i18n-aria="nav.hamburger">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -53,20 +54,20 @@
           <span class="ht-sub reveal">HOUSE</span>
         </h1>
         <div class="hero-cta reveal">
-          <a href="#menu" class="btn btn-primary">Ver Menú</a>
-          <a href="#location" class="btn btn-ghost">Reservar Mesa</a>
+          <a href="#menu" class="btn btn-primary" data-i18n="hero.viewMenu">Ver Menú</a>
+          <a href="#location" class="btn btn-ghost" data-i18n="hero.bookTable">Reservar Mesa</a>
         </div>
       </div>
 
       <div class="hero-bottom-strip">
         <div class="hbs-inner">
-          <span>Panadería Artesanal</span>
+          <span data-i18n="hero.bakery">Panadería Artesanal</span>
           <span class="hbs-sep"></span>
-          <span>Café de Especialidad</span>
+          <span data-i18n="hero.coffee">Café de Especialidad</span>
           <span class="hbs-sep"></span>
-          <span>Cocteles de Autor</span>
+          <span data-i18n="hero.cocktails">Cocteles de Autor</span>
           <span class="hbs-sep"></span>
-          <span>Música en Vivo</span>
+          <span data-i18n="hero.liveMusic">Música en Vivo</span>
           <span class="hbs-sep"></span>
           <span>Rooftop · Roma Norte</span>
         </div>
@@ -82,28 +83,28 @@
     <section class="about" id="about">
       <div class="container">
         <div class="about-statement reveal">
-          <p class="stmt-text">"El lugar donde el día empieza con pan y termina con mezcal."</p>
+          <p class="stmt-text" data-i18n="about.quote">"El lugar donde el día empieza con pan y termina con mezcal."</p>
         </div>
         <div class="about-grid">
 
           <div class="about-text">
-            <span class="section-label reveal">Nuestra Historia</span>
-            <h2 class="section-title reveal">Un espacio donde<br><em>todo sucede</em></h2>
-            <p class="about-copy reveal">
+            <span class="section-label reveal" data-i18n="about.label">Nuestra Historia</span>
+            <h2 class="section-title reveal" data-i18n-html="about.title">Un espacio donde<br><em>todo sucede</em></h2>
+            <p class="about-copy reveal" data-i18n="about.copy1">
               Cada mañana, el aroma del pan recién horneado llena nuestros espacios.
               Comenzamos el día con panes artesanales y café de especialidad,
               para después transformarnos en el mejor spot de brunch de la colonia.
             </p>
-            <p class="about-copy reveal">
+            <p class="about-copy reveal" data-i18n="about.copy2">
               Cuando cae la noche, Balam se convierte en algo diferente: cocteles
               de autor, música en vivo y DJs que curan los mejores sets desde nuestra
               terraza en el rooftop de Roma Norte.
             </p>
             <div class="about-features reveal">
-              <div class="af-item"><i class="fas fa-bread-slice"></i><span>Pan artesanal diario</span></div>
-              <div class="af-item"><i class="fas fa-mug-hot"></i><span>Café de especialidad</span></div>
-              <div class="af-item"><i class="fas fa-martini-glass"></i><span>Cocteles de autor</span></div>
-              <div class="af-item"><i class="fas fa-music"></i><span>Música en vivo</span></div>
+              <div class="af-item"><i class="fas fa-bread-slice"></i><span data-i18n="about.feature1">Pan artesanal diario</span></div>
+              <div class="af-item"><i class="fas fa-mug-hot"></i><span data-i18n="about.feature2">Café de especialidad</span></div>
+              <div class="af-item"><i class="fas fa-martini-glass"></i><span data-i18n="about.feature3">Cocteles de autor</span></div>
+              <div class="af-item"><i class="fas fa-music"></i><span data-i18n="about.feature4">Música en vivo</span></div>
             </div>
           </div>
 
@@ -115,7 +116,7 @@
               <div class="about-img" style="background-image:url('https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=400&q=80')"></div>
             </div>
             <div class="about-stat-card">
-              <div class="stat"><span class="stat-n">6</span><span class="stat-l">Años</span></div>
+              <div class="stat"><span class="stat-n">6</span><span class="stat-l" data-i18n="about.years">Años</span></div>
               <div class="stat"><span class="stat-n">4.4★</span><span class="stat-l">Rating</span></div>
             </div>
           </div>
@@ -128,8 +129,8 @@
     <section class="menu" id="menu">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">Lo que servimos</span>
-          <h2 class="section-title">Nuestro <em>Menú</em></h2>
+          <span class="section-label" data-i18n="menu.label">Lo que servimos</span>
+          <h2 class="section-title" data-i18n-html="menu.title">Nuestro <em>Menú</em></h2>
         </div>
 
         <!-- Category filter circles — tap to show that category -->
@@ -138,31 +139,31 @@
             <div class="ig-hl-ring">
               <div class="ig-hl-all"><i class="fas fa-grip"></i></div>
             </div>
-            <span>Todo</span>
+            <span data-i18n="menu.filterAll">Todo</span>
           </div>
           <div class="ig-highlight" data-filter="panaderia">
             <div class="ig-hl-ring">
               <div class="ig-hl-img" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=200&q=80')"></div>
             </div>
-            <span>Panadería</span>
+            <span data-i18n="menu.filterPanaderia">Panadería</span>
           </div>
           <div class="ig-highlight" data-filter="desayunos">
             <div class="ig-hl-ring">
               <div class="ig-hl-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=200&q=80')"></div>
             </div>
-            <span>Desayunos</span>
+            <span data-i18n="menu.filterDesayunos">Desayunos</span>
           </div>
           <div class="ig-highlight" data-filter="cocteles">
             <div class="ig-hl-ring">
               <div class="ig-hl-img" style="background-image:url('https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=200&q=80')"></div>
             </div>
-            <span>Cocteles</span>
+            <span data-i18n="menu.filterCocteles">Cocteles</span>
           </div>
           <div class="ig-highlight" data-filter="cafe">
             <div class="ig-hl-ring">
               <div class="ig-hl-img" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=200&q=80')"></div>
             </div>
-            <span>Café</span>
+            <span data-i18n="menu.filterCafe">Café</span>
           </div>
         </div>
       </div>
@@ -173,10 +174,10 @@
         <div class="ig-post reveal" data-category="panaderia">
           <div class="ig-post-img" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80')"></div>
           <div class="ig-post-content">
-            <span class="ig-post-tag">Panadería</span>
+            <span class="ig-post-tag" data-i18n="menu.tag.panaderia">Panadería</span>
             <div class="ig-post-divider"></div>
-            <h3 class="ig-post-title">Panes Artesanales</h3>
-            <p class="ig-post-items">Croissants · Danesas · Masa madre · Bizcochos de temporada</p>
+            <h3 class="ig-post-title" data-i18n="menu.item1.title">Panes Artesanales</h3>
+            <p class="ig-post-items" data-i18n="menu.item1.items">Croissants · Danesas · Masa madre · Bizcochos de temporada</p>
             <span class="ig-post-price-big">Desde $45</span>
           </div>
         </div>
@@ -184,10 +185,10 @@
         <div class="ig-post reveal" data-category="panaderia">
           <div class="ig-post-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80')"></div>
           <div class="ig-post-content">
-            <span class="ig-post-tag">Panadería</span>
+            <span class="ig-post-tag" data-i18n="menu.tag.panaderia">Panadería</span>
             <div class="ig-post-divider"></div>
-            <h3 class="ig-post-title">Repostería</h3>
-            <p class="ig-post-items">Tartas · Muffins · Cookies · Pasteles de temporada</p>
+            <h3 class="ig-post-title" data-i18n="menu.item2.title">Repostería</h3>
+            <p class="ig-post-items" data-i18n="menu.item2.items">Tartas · Muffins · Cookies · Pasteles de temporada</p>
             <span class="ig-post-price-big">Desde $55</span>
           </div>
         </div>
@@ -195,10 +196,10 @@
         <div class="ig-post reveal" data-category="desayunos">
           <div class="ig-post-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80')"></div>
           <div class="ig-post-content">
-            <span class="ig-post-tag">Desayunos</span>
+            <span class="ig-post-tag" data-i18n="menu.tag.desayunos">Desayunos</span>
             <div class="ig-post-divider"></div>
-            <h3 class="ig-post-title">Buenos Días</h3>
-            <p class="ig-post-items">Huevos benedictinos · Avocado toast · Chilaquiles del chef</p>
+            <h3 class="ig-post-title" data-i18n="menu.item3.title">Buenos Días</h3>
+            <p class="ig-post-items" data-i18n="menu.item3.items">Huevos benedictinos · Avocado toast · Chilaquiles del chef</p>
             <span class="ig-post-price-big">Desde $120</span>
           </div>
         </div>
@@ -206,10 +207,10 @@
         <div class="ig-post reveal" data-category="desayunos">
           <div class="ig-post-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80')"></div>
           <div class="ig-post-content">
-            <span class="ig-post-tag">Desayunos</span>
+            <span class="ig-post-tag" data-i18n="menu.tag.desayunos">Desayunos</span>
             <div class="ig-post-divider"></div>
-            <h3 class="ig-post-title">Brunch Weekend</h3>
-            <p class="ig-post-items">Pancakes · Granola bowl · Smoothies · Fruta de temporada</p>
+            <h3 class="ig-post-title" data-i18n="menu.item4.title">Brunch Weekend</h3>
+            <p class="ig-post-items" data-i18n="menu.item4.items">Pancakes · Granola bowl · Smoothies · Fruta de temporada</p>
             <span class="ig-post-price-big">Desde $135</span>
           </div>
         </div>
@@ -217,10 +218,10 @@
         <div class="ig-post reveal" data-category="cocteles">
           <div class="ig-post-img" style="background-image:url('https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=900&q=80')"></div>
           <div class="ig-post-content">
-            <span class="ig-post-tag">Cocteles</span>
+            <span class="ig-post-tag" data-i18n="menu.tag.cocteles">Cocteles</span>
             <div class="ig-post-divider"></div>
-            <h3 class="ig-post-title">Tragos de Autor</h3>
-            <p class="ig-post-items">Mezcal Balam · Rosa de Tepito · Coctelería de temporada</p>
+            <h3 class="ig-post-title" data-i18n="menu.item5.title">Tragos de Autor</h3>
+            <p class="ig-post-items" data-i18n="menu.item5.items">Mezcal Balam · Rosa de Tepito · Coctelería de temporada</p>
             <span class="ig-post-price-big">Desde $180</span>
           </div>
         </div>
@@ -228,10 +229,10 @@
         <div class="ig-post reveal" data-category="cocteles">
           <div class="ig-post-img" style="background-image:url('https://images.unsplash.com/photo-1514362773776-a1ffc14aeb73?auto=format&fit=crop&w=900&q=80')"></div>
           <div class="ig-post-content">
-            <span class="ig-post-tag">Cocteles</span>
+            <span class="ig-post-tag" data-i18n="menu.tag.cocteles">Cocteles</span>
             <div class="ig-post-divider"></div>
-            <h3 class="ig-post-title">Selección Mezcal</h3>
-            <p class="ig-post-items">Degustación premium · Mezcales artesanales de Oaxaca</p>
+            <h3 class="ig-post-title" data-i18n="menu.item6.title">Selección Mezcal</h3>
+            <p class="ig-post-items" data-i18n="menu.item6.items">Degustación premium · Mezcales artesanales de Oaxaca</p>
             <span class="ig-post-price-big">Desde $220</span>
           </div>
         </div>
@@ -239,10 +240,10 @@
         <div class="ig-post reveal" data-category="cafe">
           <div class="ig-post-img" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80')"></div>
           <div class="ig-post-content">
-            <span class="ig-post-tag">Café</span>
+            <span class="ig-post-tag" data-i18n="menu.tag.cafe">Café</span>
             <div class="ig-post-divider"></div>
-            <h3 class="ig-post-title">Café de Especialidad</h3>
-            <p class="ig-post-items">Espresso · Matcha latte · Cold brew · Aguas frescas de la casa</p>
+            <h3 class="ig-post-title" data-i18n="menu.item7.title">Café de Especialidad</h3>
+            <p class="ig-post-items" data-i18n="menu.item7.items">Espresso · Matcha latte · Cold brew · Aguas frescas de la casa</p>
             <span class="ig-post-price-big">Desde $65</span>
           </div>
         </div>
@@ -250,10 +251,10 @@
         <div class="ig-post reveal" data-category="cafe">
           <div class="ig-post-img" style="background-image:url('https://images.unsplash.com/photo-1519999482648-25049ddd37b1?auto=format&fit=crop&w=900&q=80')"></div>
           <div class="ig-post-content">
-            <span class="ig-post-tag">Café</span>
+            <span class="ig-post-tag" data-i18n="menu.tag.cafe">Café</span>
             <div class="ig-post-divider"></div>
-            <h3 class="ig-post-title">Aguas &amp; Jugos</h3>
-            <p class="ig-post-items">Aguas frescas · Jugos naturales · Smoothies de temporada</p>
+            <h3 class="ig-post-title" data-i18n="menu.item8.title">Aguas &amp; Jugos</h3>
+            <p class="ig-post-items" data-i18n="menu.item8.items">Aguas frescas · Jugos naturales · Smoothies de temporada</p>
             <span class="ig-post-price-big">Desde $45</span>
           </div>
         </div>
@@ -262,14 +263,14 @@
 
 
       <div class="menu-cta reveal">
-        <a href="#" class="btn btn-outline">Ver Menú Completo</a>
+        <a href="#" class="btn btn-outline" data-i18n="menu.viewFull">Ver Menú Completo</a>
       </div>
     </section>
 
     <!-- ===== 4. EVENTS / LIVE MUSIC ===== -->
     <section class="events" id="events">
       <div class="events-marquee">
-        <div class="marquee-track">
+        <div class="marquee-track" data-i18n-html="events.marquee">
           <span>Viernes DJ Set</span><span class="mdot">◆</span>
           <span>Sábado Jazz en Vivo</span><span class="mdot">◆</span>
           <span>Domingo Brunch Balam</span><span class="mdot">◆</span>
@@ -289,7 +290,7 @@
         <div class="ev-feature-body">
           <div class="ev-meta-row">
             <span class="ev-label">DJ SET</span>
-            <span class="ev-date">VIE · 26 ABR · 10PM → 3AM</span>
+            <span class="ev-date" data-i18n="events.featDate">VIE · 26 ABR · 10PM → 3AM</span>
           </div>
           <h2 class="ev-feature-title">NOCHE<br>MEZCAL</h2>
           <div class="ev-feature-footer">
@@ -301,9 +302,9 @@
 
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label neon-pink"><span class="live-dot"></span>Próximos Eventos</span>
-          <h2 class="section-title events-hed">MÚSICA<br><em>EN VIVO</em></h2>
-          <p class="events-tagline">Música en vivo · DJ Sets · Brunch dominical</p>
+          <span class="section-label neon-pink"><span class="live-dot"></span><span data-i18n="events.upcoming">Próximos Eventos</span></span>
+          <h2 class="section-title events-hed" data-i18n-html="events.title">MÚSICA<br><em>EN VIVO</em></h2>
+          <p class="events-tagline" data-i18n="events.tagline">Música en vivo · DJ Sets · Brunch dominical</p>
         </div>
 
         <!-- Two upcoming events -->
@@ -312,9 +313,9 @@
             <div class="ev-card-img" style="background-image:url('https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=800&q=80')"></div>
             <div class="ev-card-body">
               <span class="ev-label ev-label-pink">LIVE MUSIC</span>
-              <span class="ev-card-date">SÁB · 27 ABR</span>
+              <span class="ev-card-date" data-i18n="events.card1.date">SÁB · 27 ABR</span>
               <h3 class="ev-card-title">JAZZ &amp;<br>MEZCAL</h3>
-              <p class="ev-card-desc">Trío de jazz · Latin · Bossa Nova</p>
+              <p class="ev-card-desc" data-i18n="events.card1.desc">Trío de jazz · Latin · Bossa Nova</p>
               <div class="ev-card-footer">
                 <span class="ev-time">9PM → 1AM</span>
                 <span class="ev-badge badge-pink">ROOFTOP</span>
@@ -326,12 +327,12 @@
             <div class="ev-card-img" style="background-image:url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80')"></div>
             <div class="ev-card-body">
               <span class="ev-label ev-label-green">BRUNCH</span>
-              <span class="ev-card-date">DOM · 28 ABR</span>
+              <span class="ev-card-date" data-i18n="events.card2.date">DOM · 28 ABR</span>
               <h3 class="ev-card-title">DOMINGO<br>BALAM</h3>
-              <p class="ev-card-desc">Brunch · Acústico · Buenos tragos</p>
+              <p class="ev-card-desc" data-i18n="events.card2.desc">Brunch · Acústico · Buenos tragos</p>
               <div class="ev-card-footer">
                 <span class="ev-time">11AM → 6PM</span>
-                <span class="ev-badge badge-green">NUEVO</span>
+                <span class="ev-badge badge-green" data-i18n="events.card2.badge">NUEVO</span>
               </div>
             </div>
           </div>
@@ -339,31 +340,31 @@
 
         <!-- Weekly schedule -->
         <div class="ev-schedule reveal">
-          <h3 class="ev-schedule-title">Programación semanal</h3>
+          <h3 class="ev-schedule-title" data-i18n="events.schedule.title">Programación semanal</h3>
           <div class="ev-schedule-list">
             <div class="ev-row">
-              <span class="ev-row-day">Lun — Mié</span>
-              <span class="ev-row-desc">Open Bar · House Music</span>
+              <span class="ev-row-day" data-i18n="events.schedule.monwed">Lun — Mié</span>
+              <span class="ev-row-desc" data-i18n="events.schedule.monwed.desc">Open Bar · House Music</span>
               <i class="fas fa-glass-water ev-row-icon"></i>
             </div>
             <div class="ev-row">
-              <span class="ev-row-day">Jueves</span>
-              <span class="ev-row-desc">Jazz Night · Cocteles especiales</span>
+              <span class="ev-row-day" data-i18n="events.schedule.thu">Jueves</span>
+              <span class="ev-row-desc" data-i18n="events.schedule.thu.desc">Jazz Night · Cocteles especiales</span>
               <i class="fas fa-music ev-row-icon"></i>
             </div>
             <div class="ev-row">
-              <span class="ev-row-day">Viernes</span>
-              <span class="ev-row-desc">DJ Set · Afro House · Electronic</span>
+              <span class="ev-row-day" data-i18n="events.schedule.fri">Viernes</span>
+              <span class="ev-row-desc" data-i18n="events.schedule.fri.desc">DJ Set · Afro House · Electronic</span>
               <i class="fas fa-compact-disc ev-row-icon"></i>
             </div>
             <div class="ev-row">
-              <span class="ev-row-day">Sábado</span>
-              <span class="ev-row-desc">Live Band · Latin Fusion · DJ after</span>
+              <span class="ev-row-day" data-i18n="events.schedule.sat">Sábado</span>
+              <span class="ev-row-desc" data-i18n="events.schedule.sat.desc">Live Band · Latin Fusion · DJ after</span>
               <i class="fas fa-guitar ev-row-icon"></i>
             </div>
             <div class="ev-row">
-              <span class="ev-row-day">Domingo</span>
-              <span class="ev-row-desc">Brunch Balam · Acústico · Chill</span>
+              <span class="ev-row-day" data-i18n="events.schedule.sun">Domingo</span>
+              <span class="ev-row-desc" data-i18n="events.schedule.sun.desc">Brunch Balam · Acústico · Chill</span>
               <i class="fas fa-sun ev-row-icon"></i>
             </div>
           </div>
@@ -374,8 +375,8 @@
     <!-- ===== 6. GALLERY ===== -->
     <section class="gallery" id="gallery">
       <div class="gallery-header">
-        <span class="section-label reveal">Galería</span>
-        <h2 class="section-title reveal">Sígenos en <em>Instagram</em></h2>
+        <span class="section-label reveal" data-i18n="gallery.label">Galería</span>
+        <h2 class="section-title reveal" data-i18n-html="gallery.title">Sígenos en <em>Instagram</em></h2>
         <a href="https://instagram.com" class="ig-handle reveal" target="_blank" rel="noopener">@balamhouse.cdmx</a>
       </div>
 
@@ -419,10 +420,10 @@
     <section class="experience" id="experience">
       <div class="container">
         <div class="exp-header">
-          <span class="section-label reveal">La Experiencia</span>
+          <span class="section-label reveal" data-i18n="exp.label">La Experiencia</span>
           <div class="exp-header-row">
-            <h2 class="section-title reveal reveal-scale">Por qué <em>Balam House</em></h2>
-            <p class="exp-intro reveal" data-delay="0.15s">Seis razones por las que Balam House se ha convertido en el punto de encuentro de Roma Norte.</p>
+            <h2 class="section-title reveal reveal-scale" data-i18n-html="exp.title">Por qué <em>Balam House</em></h2>
+            <p class="exp-intro reveal" data-delay="0.15s" data-i18n="exp.intro">Seis razones por las que Balam House se ha convertido en el punto de encuentro de Roma Norte.</p>
           </div>
         </div>
 
@@ -430,48 +431,48 @@
           <div class="exp-item reveal" data-delay="0s">
             <span class="exp-num">01</span>
             <div class="exp-item-body">
-              <h3 class="exp-item-title">Rooftop Experience</h3>
-              <p class="exp-item-desc">Vistas únicas de la ciudad desde nuestra terraza. El lugar perfecto para cada hora del día.</p>
+              <h3 class="exp-item-title" data-i18n="exp.item1.title">Rooftop Experience</h3>
+              <p class="exp-item-desc" data-i18n="exp.item1.desc">Vistas únicas de la ciudad desde nuestra terraza. El lugar perfecto para cada hora del día.</p>
             </div>
             <i class="fas fa-building exp-item-icon"></i>
           </div>
           <div class="exp-item reveal" data-delay="0.1s">
             <span class="exp-num">02</span>
             <div class="exp-item-body">
-              <h3 class="exp-item-title">Cocteles de Autor</h3>
-              <p class="exp-item-desc">Nuestros bartenders crean experiencias con mezcal, tequila y destilados artesanales mexicanos.</p>
+              <h3 class="exp-item-title" data-i18n="exp.item2.title">Cocteles de Autor</h3>
+              <p class="exp-item-desc" data-i18n="exp.item2.desc">Nuestros bartenders crean experiencias con mezcal, tequila y destilados artesanales mexicanos.</p>
             </div>
             <i class="fas fa-martini-glass exp-item-icon"></i>
           </div>
           <div class="exp-item reveal" data-delay="0.2s">
             <span class="exp-num">03</span>
             <div class="exp-item-body">
-              <h3 class="exp-item-title">Música en Vivo</h3>
-              <p class="exp-item-desc">De jazz al amanecer a electronic al caer la noche. Cada día una experiencia sonora diferente.</p>
+              <h3 class="exp-item-title" data-i18n="exp.item3.title">Música en Vivo</h3>
+              <p class="exp-item-desc" data-i18n="exp.item3.desc">De jazz al amanecer a electronic al caer la noche. Cada día una experiencia sonora diferente.</p>
             </div>
             <i class="fas fa-music exp-item-icon"></i>
           </div>
           <div class="exp-item reveal" data-delay="0.3s">
             <span class="exp-num">04</span>
             <div class="exp-item-body">
-              <h3 class="exp-item-title">Pan de Cada Día</h3>
-              <p class="exp-item-desc">Horneamos cada mañana. Masa madre, croissants y panes de temporada hechos con amor artesanal.</p>
+              <h3 class="exp-item-title" data-i18n="exp.item4.title">Pan de Cada Día</h3>
+              <p class="exp-item-desc" data-i18n="exp.item4.desc">Horneamos cada mañana. Masa madre, croissants y panes de temporada hechos con amor artesanal.</p>
             </div>
             <i class="fas fa-bread-slice exp-item-icon"></i>
           </div>
           <div class="exp-item reveal" data-delay="0.4s">
             <span class="exp-num">05</span>
             <div class="exp-item-body">
-              <h3 class="exp-item-title">Desayunos Únicos</h3>
-              <p class="exp-item-desc">El mejor momento del día merece el mejor café y un menú que mezcla México con lo contemporáneo.</p>
+              <h3 class="exp-item-title" data-i18n="exp.item5.title">Desayunos Únicos</h3>
+              <p class="exp-item-desc" data-i18n="exp.item5.desc">El mejor momento del día merece el mejor café y un menú que mezcla México con lo contemporáneo.</p>
             </div>
             <i class="fas fa-sun exp-item-icon"></i>
           </div>
           <div class="exp-item reveal" data-delay="0.5s">
             <span class="exp-num">06</span>
             <div class="exp-item-body">
-              <h3 class="exp-item-title">Comunidad</h3>
-              <p class="exp-item-desc">Punto de encuentro para artistas, creativos y noctámbulos de la Ciudad de México.</p>
+              <h3 class="exp-item-title" data-i18n="exp.item6.title">Comunidad</h3>
+              <p class="exp-item-desc" data-i18n="exp.item6.desc">Punto de encuentro para artistas, creativos y noctámbulos de la Ciudad de México.</p>
             </div>
             <i class="fas fa-heart exp-item-icon"></i>
           </div>
@@ -483,8 +484,8 @@
     <section class="location" id="location">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">Encuéntranos</span>
-          <h2 class="section-title">Visítanos en <em>CDMX</em></h2>
+          <span class="section-label" data-i18n="loc.label">Encuéntranos</span>
+          <h2 class="section-title" data-i18n-html="loc.title">Visítanos en <em>CDMX</em></h2>
         </div>
         <div class="location-grid">
 
@@ -492,36 +493,36 @@
             <div class="info-row">
               <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
               <div>
-                <h4 class="info-label">Dirección</h4>
+                <h4 class="info-label" data-i18n="loc.address.label">Dirección</h4>
                 <p class="info-val">Álvaro Obregón 123, Col. Roma Norte<br>Ciudad de México, CDMX 06700</p>
               </div>
             </div>
             <div class="info-row">
               <div class="info-icon"><i class="fas fa-phone"></i></div>
               <div>
-                <h4 class="info-label">Teléfono / WhatsApp</h4>
+                <h4 class="info-label" data-i18n="loc.phone.label">Teléfono / WhatsApp</h4>
                 <p class="info-val">+52 55 1234 5678</p>
               </div>
             </div>
             <div class="info-row">
               <div class="info-icon"><i class="fas fa-clock"></i></div>
               <div>
-                <h4 class="info-label">Horarios</h4>
+                <h4 class="info-label" data-i18n="loc.hours.label">Horarios</h4>
                 <div class="hours">
-                  <div class="hr"><span>Lun — Vie</span><span class="hr-time">8:00 AM — 2:00 AM</span></div>
-                  <div class="hr"><span>Sábado</span><span class="hr-time">9:00 AM — 3:00 AM</span></div>
-                  <div class="hr"><span>Domingo</span><span class="hr-time">10:00 AM — 9:00 PM</span></div>
+                  <div class="hr"><span data-i18n="loc.hours.monFri">Lun — Vie</span><span class="hr-time">8:00 AM — 2:00 AM</span></div>
+                  <div class="hr"><span data-i18n="loc.hours.sat">Sábado</span><span class="hr-time">9:00 AM — 3:00 AM</span></div>
+                  <div class="hr"><span data-i18n="loc.hours.sun">Domingo</span><span class="hr-time">10:00 AM — 9:00 PM</span></div>
                 </div>
               </div>
             </div>
             <div class="info-row">
               <div class="info-icon"><i class="fas fa-envelope"></i></div>
               <div>
-                <h4 class="info-label">Reservaciones</h4>
+                <h4 class="info-label" data-i18n="loc.reservations.label">Reservaciones</h4>
                 <p class="info-val">hola@balamhouse.mx</p>
               </div>
             </div>
-            <a href="mailto:hola@balamhouse.mx" class="btn btn-primary loc-btn">Reservar Ahora</a>
+            <a href="mailto:hola@balamhouse.mx" class="btn btn-primary loc-btn" data-i18n="loc.reserveBtn">Reservar Ahora</a>
           </div>
 
           <div class="loc-map reveal reveal-right">
@@ -539,14 +540,14 @@
     <section class="reviews" id="reviews">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">Lo que dicen</span>
-          <h2 class="section-title"><em>4.4★</em> en Google</h2>
+          <span class="section-label" data-i18n="reviews.label">Lo que dicen</span>
+          <h2 class="section-title" data-i18n-html="reviews.title"><em>4.4★</em> en Google</h2>
           <div class="rating-row reveal">
             <div class="stars-big">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
             </div>
-            <span class="rating-count">Basado en +320 reseñas</span>
+            <span class="rating-count" data-i18n="reviews.count">Basado en +320 reseñas</span>
           </div>
         </div>
 
@@ -556,7 +557,7 @@
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               <i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
-            <p class="rv-text">"El mejor lugar para empezar el fin de semana. El croissant de mantequilla es de otro nivel y el mezcal sour de la casa es adictivo. Ya es nuestro spot favorito en Roma."</p>
+            <p class="rv-text" data-i18n="reviews.rv1">"El mejor lugar para empezar el fin de semana. El croissant de mantequilla es de otro nivel y el mezcal sour de la casa es adictivo. Ya es nuestro spot favorito en Roma."</p>
             <div class="rv-author">
               <div class="rv-avatar">MC</div>
               <div>
@@ -570,7 +571,7 @@
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               <i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
-            <p class="rv-text">"Vine por el café y me quedé hasta el amanecer. El DJ set del viernes es brutal, la vibra es increíble. No se lo pueden perder si vienen a la CDMX."</p>
+            <p class="rv-text" data-i18n="reviews.rv2">"Vine por el café y me quedé hasta el amanecer. El DJ set del viernes es brutal, la vibra es increíble. No se lo pueden perder si vienen a la CDMX."</p>
             <div class="rv-author">
               <div class="rv-avatar">JR</div>
               <div>
@@ -584,7 +585,7 @@
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
             </div>
-            <p class="rv-text">"Como turista buscando algo auténtico en CDMX, Balam fue un descubrimiento increíble. El rooftop con vistas a la ciudad mientras escuchas jazz en vivo es mágico."</p>
+            <p class="rv-text" data-i18n="reviews.rv3">"Como turista buscando algo auténtico en CDMX, Balam fue un descubrimiento increíble. El rooftop con vistas a la ciudad mientras escuchas jazz en vivo es mágico."</p>
             <div class="rv-author">
               <div class="rv-avatar">SL</div>
               <div>
@@ -610,7 +611,7 @@
               <span class="fl-main">BALAM</span>
               <span class="fl-sub">HOUSE</span>
             </a>
-            <p class="footer-tagline">Panadería artesanal · Café · Tragos · Música</p>
+            <p class="footer-tagline" data-i18n="footer.tagline">Panadería artesanal · Café · Tragos · Música</p>
             <p class="footer-addr">Roma Norte · Ciudad de México</p>
             <div class="social-links">
               <a href="#" class="sl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -621,29 +622,29 @@
           </div>
 
           <div class="footer-links">
-            <h4>Explorar</h4>
+            <h4 data-i18n="footer.explore">Explorar</h4>
             <ul>
-              <li><a href="#about">Nosotros</a></li>
-              <li><a href="#menu">Menú</a></li>
-              <li><a href="#events">Eventos</a></li>
-              <li><a href="#gallery">Galería</a></li>
-              <li><a href="#reviews">Reseñas</a></li>
+              <li><a href="#about" data-i18n="footer.about">Nosotros</a></li>
+              <li><a href="#menu" data-i18n="footer.menu">Menú</a></li>
+              <li><a href="#events" data-i18n="footer.events">Eventos</a></li>
+              <li><a href="#gallery" data-i18n="footer.gallery">Galería</a></li>
+              <li><a href="#reviews" data-i18n="footer.reviews">Reseñas</a></li>
             </ul>
           </div>
 
           <div class="footer-links">
-            <h4>Visítanos</h4>
+            <h4 data-i18n="footer.visit">Visítanos</h4>
             <ul>
-              <li><a href="#location">Reservaciones</a></li>
-              <li><a href="#">Eventos privados</a></li>
-              <li><a href="#">Prensa</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a href="#location" data-i18n="footer.reservations">Reservaciones</a></li>
+              <li><a href="#" data-i18n="footer.private">Eventos privados</a></li>
+              <li><a href="#" data-i18n="footer.press">Prensa</a></li>
+              <li><a href="#" data-i18n="footer.contact">Contacto</a></li>
             </ul>
           </div>
 
           <div class="footer-newsletter">
-            <h4>Mantente al día</h4>
-            <p>Sé el primero en saber sobre eventos y nuevos menús.</p>
+            <h4 data-i18n="footer.newsletter">Mantente al día</h4>
+            <p data-i18n="footer.newsletterDesc">Sé el primero en saber sobre eventos y nuevos menús.</p>
             <form class="nl-form" id="nlForm">
               <input type="email" class="nl-input" placeholder="tu@email.com" required />
               <button type="submit" class="nl-btn" aria-label="Suscribirse">
@@ -657,12 +658,13 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; 2024 Balam House CDMX. Todos los derechos reservados.</p>
-        <p>Hecho con amor en México 🇲🇽</p>
+        <p data-i18n="footer.copyright">&copy; 2024 Balam House CDMX. Todos los derechos reservados.</p>
+        <p data-i18n="footer.madeWith">Hecho con amor en México 🇲🇽</p>
       </div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
