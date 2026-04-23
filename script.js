@@ -135,14 +135,16 @@ imgs.forEach(el => {
   revealObserver.unobserve(main);
   revealObserver.unobserve(sub);
 
-  /* Snap the parent elements to visible instantly (no fade-in) so only
-     the individual .hl spans control their own opacity animation */
-  [main, sub].forEach(el => {
-    el.style.transition = 'none';
-    el.style.opacity    = '1';
-    el.style.transform  = 'none';
-    el.classList.remove('reveal');
-  });
+  main.style.transition = 'none';
+  main.style.opacity    = '1';
+  main.style.transform  = 'none';
+  main.classList.remove('reveal');
+
+  /* Sub gets a whole-word animation — don't pre-set opacity so the
+     animation fill-mode can hold it at 0 during the delay. */
+  sub.style.transition = 'none';
+  sub.style.transform  = 'none';
+  sub.classList.remove('reveal');
 
   const mainLen = [...main.textContent.trim()].length;
 
@@ -154,7 +156,12 @@ imgs.forEach(el => {
   };
 
   splitLetters(main, 0.2);
-  splitLetters(sub,  0.2 + mainLen * 0.06 + 0.08);
+
+  /* Animate sub as a whole word — splitting italic serif letters into
+     individual inline-block spans causes the O's slant to bleed visually
+     into the adjacent character, making "HOUSE" render as "HOrUSE". */
+  const subDelay = (0.2 + mainLen * 0.06 + 0.08).toFixed(2);
+  sub.style.animation = `heroLetterIn .85s cubic-bezier(.16,1,.3,1) ${subDelay}s both`;
 })();
 
 /* ---- Stat counter animation ---- */
