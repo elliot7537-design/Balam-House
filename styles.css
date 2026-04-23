@@ -5,22 +5,22 @@
 
 /* ---- Custom Properties ---- */
 :root {
-  --bg:       #0d0904;
-  --bg2:      #141009;
-  --bg3:      #1c160d;
-  --card:     #231a10;
-  --orange:   #D4651F;
-  --orange-l: #E07733;
-  --red:      #B83520;
-  --cream:    #EDE0CC;
-  --cream-d:  #B8A98C;
+  --bg:       #1c1008;
+  --bg2:      #251508;
+  --bg3:      #321e0e;
+  --card:     #3e2410;
+  --orange:   #E06818;
+  --orange-l: #F07A28;
+  --red:      #C43820;
+  --cream:    #F5EAD5;
+  --cream-d:  #CCB898;
   --pink:     #FF2876;
   --green:    #00E5A0;
-  --text:     #F0EAE0;
-  --text-d:   #8A8680;
-  --text-m:   #565047;
-  --border:   rgba(212,101,31,0.08);
-  --border-l: rgba(212,101,31,0.15);
+  --text:     #F8F0E6;
+  --text-d:   #A89888;
+  --text-m:   #7A6858;
+  --border:   rgba(212,101,31,0.24);
+  --border-l: rgba(212,101,31,0.42);
 }
 
 /* ---- Reset ---- */
@@ -249,8 +249,8 @@ section { position:relative; overflow:hidden; }
   position:absolute;
   inset:0;
   background:
-    linear-gradient(to bottom, rgba(8,8,8,.6) 0%, rgba(8,8,8,.45) 50%, rgba(8,8,8,.9) 100%),
-    linear-gradient(to right, rgba(8,8,8,.5) 0%, transparent 60%);
+    linear-gradient(to bottom, rgba(22,10,4,.55) 0%, rgba(22,10,4,.35) 50%, rgba(22,10,4,.92) 100%),
+    linear-gradient(to right, rgba(22,10,4,.55) 0%, transparent 60%);
 }
 
 .hero-grain {
@@ -310,7 +310,8 @@ section { position:relative; overflow:hidden; }
   font-style:italic;
   font-weight:300;
   font-size:clamp(2rem,6.5vw,5.5rem);
-  letter-spacing:.6em;
+  letter-spacing:.32em;
+  padding-right:.32em;
   color:var(--orange);
 }
 
@@ -384,7 +385,11 @@ section { position:relative; overflow:hidden; }
 /* ===========================================
    ABOUT
    =========================================== */
-.about { padding:9rem 0; background:var(--bg); }
+.about {
+  padding:9rem 0;
+  background:var(--bg);
+  background-image:radial-gradient(ellipse 80% 60% at 100% 50%, rgba(180,70,15,0.1) 0%, transparent 65%);
+}
 
 .about-grid {
   display:grid;
@@ -470,7 +475,7 @@ section { position:relative; overflow:hidden; }
 /* ===========================================
    MENU PREVIEW
    =========================================== */
-.menu { padding:9rem 0; background:var(--bg2); }
+.menu { padding:9rem 0; background:var(--bg2); border-top:1px solid var(--border); }
 
 .menu-grid {
   display:grid;
@@ -502,18 +507,18 @@ section { position:relative; overflow:hidden; }
   z-index:1;
   background:linear-gradient(
     to top,
-    rgba(8,8,8,.97) 0%,
-    rgba(8,8,8,.55) 45%,
-    rgba(8,8,8,.1) 100%
+    rgba(22,10,4,.97) 0%,
+    rgba(22,10,4,.52) 45%,
+    rgba(22,10,4,.08) 100%
   );
   transition:background .4s ease;
 }
 .menu-card:hover::before {
   background:linear-gradient(
     to top,
-    rgba(8,8,8,.99) 0%,
-    rgba(8,8,8,.75) 55%,
-    rgba(8,8,8,.25) 100%
+    rgba(22,10,4,.99) 0%,
+    rgba(22,10,4,.72) 55%,
+    rgba(22,10,4,.22) 100%
   );
 }
 
@@ -559,7 +564,7 @@ section { position:relative; overflow:hidden; }
 /* ===========================================
    GALLERY
    =========================================== */
-.gallery { padding:9rem 0; background:var(--bg); }
+.gallery { padding:9rem 0; background:var(--bg); border-top:1px solid var(--border); }
 
 .gallery-header {
   text-align:center;
@@ -602,7 +607,7 @@ section { position:relative; overflow:hidden; }
 .gi-overlay {
   position:absolute;
   inset:0;
-  background:rgba(8,8,8,.65);
+  background:rgba(22,10,4,.7);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -855,7 +860,12 @@ section { position:relative; overflow:hidden; }
 /* ===========================================
    EXPERIENCE
    =========================================== */
-.experience { padding:9rem 0; background:var(--bg); }
+.experience {
+  padding:9rem 0;
+  background:var(--bg);
+  background-image:radial-gradient(ellipse 90% 50% at 50% 100%, rgba(180,70,15,0.09) 0%, transparent 65%);
+  border-top:1px solid var(--border);
+}
 
 .exp-grid {
   display:grid;
@@ -864,11 +874,11 @@ section { position:relative; overflow:hidden; }
   background:var(--border);
 }
 .exp-card {
-  background:var(--bg);
+  background:var(--bg2);
   padding:3rem;
   transition:background .3s ease;
 }
-.exp-card:hover { background:var(--bg3); }
+.exp-card:hover { background:var(--card); }
 
 .exp-icon {
   width:50px; height:50px;
@@ -898,7 +908,7 @@ section { position:relative; overflow:hidden; }
 /* ===========================================
    LOCATION
    =========================================== */
-.location { padding:9rem 0; background:var(--bg2); }
+.location { padding:9rem 0; background:var(--bg2); border-top:1px solid var(--border); }
 
 .location-grid {
   display:grid;
@@ -958,7 +968,11 @@ section { position:relative; overflow:hidden; }
 /* ===========================================
    REVIEWS
    =========================================== */
-.reviews { padding:9rem 0; background:var(--bg); }
+.reviews {
+  padding:9rem 0;
+  background:var(--bg);
+  border-top:1px solid var(--border);
+}
 
 .rating-row {
   display:flex;
@@ -982,7 +996,7 @@ section { position:relative; overflow:hidden; }
   background:var(--border);
 }
 .rv-card {
-  background:var(--bg);
+  background:var(--bg2);
   padding:2.75rem;
   transition:background .3s ease, box-shadow .3s ease;
 }
