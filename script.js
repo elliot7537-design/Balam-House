@@ -134,8 +134,15 @@ imgs.forEach(el => {
 
   revealObserver.unobserve(main);
   revealObserver.unobserve(sub);
-  main.classList.remove('reveal');
-  sub.classList.remove('reveal');
+
+  /* Snap the parent elements to visible instantly (no fade-in) so only
+     the individual .hl spans control their own opacity animation */
+  [main, sub].forEach(el => {
+    el.style.transition = 'none';
+    el.style.opacity    = '1';
+    el.style.transform  = 'none';
+    el.classList.remove('reveal');
+  });
 
   const mainLen = [...main.textContent.trim()].length;
 
@@ -146,8 +153,8 @@ imgs.forEach(el => {
     ).join('');
   };
 
-  splitLetters(main, 0.25);
-  splitLetters(sub,  0.25 + mainLen * 0.06 + 0.1);
+  splitLetters(main, 0.2);
+  splitLetters(sub,  0.2 + mainLen * 0.06 + 0.08);
 })();
 
 /* ---- Stat counter animation ---- */
