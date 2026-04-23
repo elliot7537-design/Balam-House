@@ -42,25 +42,30 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ---- Scroll-reveal (Intersection Observer) ---- */
-const revealItems = document.querySelectorAll('.reveal');
-
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
 
-    /* Stagger siblings */
-    const siblings = Array.from(
-      entry.target.parentElement.querySelectorAll('.reveal')
-    );
-    const idx = siblings.indexOf(entry.target);
-    entry.target.style.transitionDelay = `${idx * 0.07}s`;
+    const el = entry.target;
 
-    entry.target.classList.add('visible');
-    revealObserver.unobserve(entry.target);
+    /* data-delay attribute takes priority over auto-stagger */
+    if (el.dataset.delay) {
+      el.style.transitionDelay = el.dataset.delay;
+    } else {
+      /* Stagger direct-child siblings for a sequenced cascade */
+      const siblings = Array.from(
+        el.parentElement.querySelectorAll(':scope > .reveal, :scope > .reveal-scale')
+      );
+      const idx = siblings.indexOf(el);
+      el.style.transitionDelay = `${Math.min(idx * 0.12, 0.6)}s`;
+    }
+
+    el.classList.add('visible');
+    revealObserver.unobserve(el);
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+}, { threshold: 0.07, rootMargin: '0px 0px -60px 0px' });
 
-revealItems.forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal, .reveal-scale').forEach(el => revealObserver.observe(el));
 
 /* ---- Hero parallax (subtle) ---- */
 const heroBg = document.querySelector('.hero-bg');
