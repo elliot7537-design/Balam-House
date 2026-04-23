@@ -102,7 +102,7 @@ if (nlForm) {
     e.preventDefault();
     const input = nlForm.querySelector('.nl-input');
     const btn   = nlForm.querySelector('.nl-btn');
-    input.value = '¡Gracias por suscribirte!';
+    input.value = TRANSLATIONS[window.__balamLang || 'es']['nl.thanks'];
     input.style.color = 'var(--green)';
     btn.innerHTML = '<i class="fas fa-check"></i>';
     btn.style.background = 'var(--green)';
