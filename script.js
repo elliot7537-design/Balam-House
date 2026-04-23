@@ -113,7 +113,7 @@ if (nlForm) {
 }
 
 /* ---- Image error fallback ---- */
-const imgs = document.querySelectorAll('.mc-img, .gi-img, .about-img');
+const imgs = document.querySelectorAll('.ig-post-img, .ig-hl-img, .gi-img, .about-img');
 imgs.forEach(el => {
   const url = el.style.backgroundImage;
   if (!url) return;
@@ -121,7 +121,7 @@ imgs.forEach(el => {
   const img = new Image();
   img.onerror = () => {
     el.style.backgroundImage = 'none';
-    el.style.background = 'linear-gradient(135deg,#1a0e00 0%,#0a0704 100%)';
+    el.style.background = 'linear-gradient(135deg,#020814 0%,#010508 100%)';
   };
   img.src = url.replace(/url\(['"]?|['"]?\)/g, '');
 });
