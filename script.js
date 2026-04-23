@@ -220,6 +220,7 @@ document.querySelectorAll('.stat-n').forEach(el => statObserver.observe(el));
           p.style.display = (filter === 'all' || p.dataset.category === filter) ? '' : 'none';
         });
         carousel.scrollTop = 0;
+        carousel.scrollLeft = 0;
         carousel.style.opacity = '1';
       }, 200);
     });

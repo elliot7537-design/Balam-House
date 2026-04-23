@@ -703,30 +703,47 @@ section { position:relative; overflow:hidden; }
   transform:translateY(0);
 }
 
-/* Responsive: stack on tablet/mobile */
-@media (max-width:768px) {
-  .menu-vswipe-wrap { height:82vh; }
+/* Tablet / iPad / mobile — switch to horizontal snap scroll */
+@media (max-width:960px) {
+  .menu-vswipe-wrap {
+    display:flex;
+    flex-direction:row;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    height:68vh;
+  }
   .ig-post {
     flex-direction:column;
-    height:82vh;
+    flex-shrink:0;
+    width:78vw;
+    height:68vh;
+    scroll-snap-align:start;
   }
-  .ig-post-img { width:100%; height:52%; }
+  .ig-post-img {
+    width:100%;
+    height:54%;
+    flex-shrink:0;
+  }
   .ig-post-content {
-    padding:2rem 1.75rem;
+    flex:1;
+    height:46%;
     border-left:none;
     border-top:1px solid var(--border);
-    gap:.9rem;
+    padding:1.75rem 2rem;
+    gap:.85rem;
     justify-content:center;
+    overflow:hidden;
   }
-  .ig-post-title { font-size:2.6rem; }
+  .ig-post-title { font-size:2.4rem; }
   .ig-post-items { font-size:.76rem; }
 }
 
 @media (max-width:520px) {
-  .menu-vswipe-wrap { height:88vh; }
-  .ig-post { height:88vh; }
-  .ig-post-content { padding:1.5rem 1.25rem; }
-  .ig-post-title { font-size:2.2rem; }
+  .menu-vswipe-wrap { height:72vh; }
+  .ig-post { width:88vw; height:72vh; }
+  .ig-post-content { padding:1.25rem 1.5rem; }
+  .ig-post-title { font-size:2rem; }
 }
 
 
