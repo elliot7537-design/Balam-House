@@ -191,3 +191,71 @@ const statObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.6 });
 
 document.querySelectorAll('.stat-n').forEach(el => statObserver.observe(el));
+
+/* ---- Menu swipe carousel ---- */
+(function initCarousel() {
+  const carousel   = document.getElementById('igCarousel');
+  const prevBtn    = document.getElementById('igPrev');
+  const nextBtn    = document.getElementById('igNext');
+  const highlights = document.querySelectorAll('#igHighlights .ig-highlight');
+  if (!carousel || !prevBtn || !nextBtn) return;
+
+  const posts = Array.from(carousel.querySelectorAll('.ig-post'));
+
+  /* Scroll by one post width */
+  function scrollByOne(dir) {
+    const visible = posts.find(p => p.style.display !== 'none');
+    if (!visible) return;
+    carousel.scrollBy({ left: dir * (visible.offsetWidth + 3), behavior: 'smooth' });
+  }
+  prevBtn.addEventListener('click', () => scrollByOne(-1));
+  nextBtn.addEventListener('click', () => scrollByOne(1));
+
+  /* Keep arrow states in sync */
+  function syncArrows() {
+    prevBtn.disabled = carousel.scrollLeft < 2;
+    nextBtn.disabled = carousel.scrollLeft >= carousel.scrollWidth - carousel.offsetWidth - 2;
+  }
+  carousel.addEventListener('scroll', syncArrows, { passive: true });
+  syncArrows();
+
+  /* Category filter — fade out, swap visible posts, reset scroll, fade in */
+  highlights.forEach(hl => {
+    hl.addEventListener('click', () => {
+      const filter = hl.dataset.filter;
+      highlights.forEach(h => {
+        h.classList.toggle('active', h === hl);
+        h.classList.toggle('inactive', h !== hl);
+      });
+
+      carousel.style.opacity = '0';
+      setTimeout(() => {
+        posts.forEach(p => {
+          p.style.display = (filter === 'all' || p.dataset.category === filter) ? '' : 'none';
+        });
+        carousel.scrollLeft = 0;
+        carousel.style.opacity = '1';
+        syncArrows();
+      }, 200);
+    });
+  });
+
+  /* Drag-to-scroll on desktop */
+  let dragging = false, dragStartX, dragStartScroll;
+
+  carousel.addEventListener('mousedown', e => {
+    dragging = true;
+    dragStartX = e.pageX;
+    dragStartScroll = carousel.scrollLeft;
+    carousel.classList.add('is-dragging');
+  });
+  window.addEventListener('mouseup', () => {
+    dragging = false;
+    carousel.classList.remove('is-dragging');
+  });
+  window.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    e.preventDefault();
+    carousel.scrollLeft = dragStartScroll - (e.pageX - dragStartX);
+  });
+})();
