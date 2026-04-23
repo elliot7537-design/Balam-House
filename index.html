@@ -260,10 +260,6 @@
 
       </div>
 
-      <div class="vswipe-nav">
-        <button class="ig-arrow" id="igPrev" aria-label="Anterior"><i class="fas fa-chevron-up"></i></button>
-        <button class="ig-arrow" id="igNext" aria-label="Siguiente"><i class="fas fa-chevron-down"></i></button>
-      </div>
 
       <div class="menu-cta reveal">
         <a href="#" class="btn btn-outline">Ver Menú Completo</a>
@@ -330,6 +326,23 @@
           <span>Música en Vivo CDMX</span><span class="mdot">◆</span>
         </div>
       </div>
+
+      <!-- Featured event — full bleed, outside container -->
+      <div class="ev-feature reveal">
+        <div class="ev-feature-img" style="background-image:url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1400&q=80')"></div>
+        <div class="ev-feature-body">
+          <div class="ev-meta-row">
+            <span class="ev-label">DJ SET</span>
+            <span class="ev-date">VIE · 26 ABR · 10PM → 3AM</span>
+          </div>
+          <h2 class="ev-feature-title">NOCHE<br>MEZCAL</h2>
+          <div class="ev-feature-footer">
+            <p class="ev-feature-desc">DJ Balam · Electronic · Afro House</p>
+            <span class="ev-badge">FREE ENTRY</span>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label neon-pink"><span class="live-dot"></span>Próximos Eventos</span>
@@ -337,74 +350,66 @@
           <p class="events-tagline">Música en vivo · DJ Sets · Brunch dominical</p>
         </div>
 
-        <div class="events-grid">
-          <!-- Featured poster -->
-          <div class="poster poster-featured reveal">
-            <div class="poster-accent"></div>
-            <div class="poster-stripes"></div>
-            <div class="poster-inner">
-              <div class="poster-date">
-                <span class="pd-day">VIE</span>
-                <span class="pd-num">26</span>
-                <span class="pd-mon">ABR</span>
+        <!-- Two upcoming events -->
+        <div class="ev-pair reveal">
+          <div class="ev-card">
+            <div class="ev-card-img" style="background-image:url('https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=800&q=80')"></div>
+            <div class="ev-card-body">
+              <span class="ev-label ev-label-pink">LIVE MUSIC</span>
+              <span class="ev-card-date">SÁB · 27 ABR</span>
+              <h3 class="ev-card-title">JAZZ &amp;<br>MEZCAL</h3>
+              <p class="ev-card-desc">Trío de jazz · Latin · Bossa Nova</p>
+              <div class="ev-card-footer">
+                <span class="ev-time">9PM → 1AM</span>
+                <span class="ev-badge badge-pink">ROOFTOP</span>
               </div>
-              <div class="poster-body">
-                <span class="poster-type">DJ SET</span>
-                <h3 class="poster-artist">NOCHE<br>MEZCAL</h3>
-                <p class="poster-desc">DJ Balam · Electronic · Afro House</p>
-                <span class="poster-time">10PM → 3AM</span>
-              </div>
-              <span class="poster-badge">FREE ENTRY</span>
             </div>
           </div>
 
-          <div class="poster poster-red reveal">
-            <div class="poster-accent"></div>
-            <div class="poster-stripes"></div>
-            <div class="poster-inner">
-              <div class="poster-date">
-                <span class="pd-day">SÁB</span>
-                <span class="pd-num">27</span>
-                <span class="pd-mon">ABR</span>
+          <div class="ev-card">
+            <div class="ev-card-img" style="background-image:url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80')"></div>
+            <div class="ev-card-body">
+              <span class="ev-label ev-label-green">BRUNCH</span>
+              <span class="ev-card-date">DOM · 28 ABR</span>
+              <h3 class="ev-card-title">DOMINGO<br>BALAM</h3>
+              <p class="ev-card-desc">Brunch · Acústico · Buenos tragos</p>
+              <div class="ev-card-footer">
+                <span class="ev-time">11AM → 6PM</span>
+                <span class="ev-badge badge-green">NUEVO</span>
               </div>
-              <div class="poster-body">
-                <span class="poster-type">LIVE MUSIC</span>
-                <h3 class="poster-artist">JAZZ &amp;<br>MEZCAL</h3>
-                <p class="poster-desc">Trío de jazz · Latin · Bossa Nova</p>
-                <span class="poster-time">9PM → 1AM</span>
-              </div>
-              <span class="poster-badge badge-pink">ROOFTOP</span>
-            </div>
-          </div>
-
-          <div class="poster poster-green reveal">
-            <div class="poster-accent"></div>
-            <div class="poster-stripes"></div>
-            <div class="poster-inner">
-              <div class="poster-date">
-                <span class="pd-day">DOM</span>
-                <span class="pd-num">28</span>
-                <span class="pd-mon">ABR</span>
-              </div>
-              <div class="poster-body">
-                <span class="poster-type">BRUNCH</span>
-                <h3 class="poster-artist">DOMINGO<br>BALAM</h3>
-                <p class="poster-desc">Brunch · Acústico · Buenos tragos</p>
-                <span class="poster-time">11AM → 6PM</span>
-              </div>
-              <span class="poster-badge badge-green">NUEVO</span>
             </div>
           </div>
         </div>
 
-        <div class="weekly reveal">
-          <h3 class="weekly-title">Programación semanal</h3>
-          <div class="weekly-grid">
-            <div class="wi"><span class="wi-day"><i class="fa-solid fa-glass-water wi-icon"></i>Lun — Mié</span><span class="wi-desc">Open Bar · House Music</span></div>
-            <div class="wi"><span class="wi-day"><i class="fa-solid fa-music wi-icon"></i>Jueves</span><span class="wi-desc">Jazz Night · Cocteles especiales</span></div>
-            <div class="wi"><span class="wi-day"><i class="fa-solid fa-compact-disc wi-icon"></i>Viernes</span><span class="wi-desc">DJ Set · Afro House · Electronic</span></div>
-            <div class="wi"><span class="wi-day"><i class="fa-solid fa-guitar wi-icon"></i>Sábado</span><span class="wi-desc">Live Band · Latin Fusion · DJ after</span></div>
-            <div class="wi"><span class="wi-day"><i class="fa-solid fa-sun wi-icon"></i>Domingo</span><span class="wi-desc">Brunch Balam · Acústico · Chill</span></div>
+        <!-- Weekly schedule -->
+        <div class="ev-schedule reveal">
+          <h3 class="ev-schedule-title">Programación semanal</h3>
+          <div class="ev-schedule-list">
+            <div class="ev-row">
+              <span class="ev-row-day">Lun — Mié</span>
+              <span class="ev-row-desc">Open Bar · House Music</span>
+              <i class="fas fa-glass-water ev-row-icon"></i>
+            </div>
+            <div class="ev-row">
+              <span class="ev-row-day">Jueves</span>
+              <span class="ev-row-desc">Jazz Night · Cocteles especiales</span>
+              <i class="fas fa-music ev-row-icon"></i>
+            </div>
+            <div class="ev-row">
+              <span class="ev-row-day">Viernes</span>
+              <span class="ev-row-desc">DJ Set · Afro House · Electronic</span>
+              <i class="fas fa-compact-disc ev-row-icon"></i>
+            </div>
+            <div class="ev-row">
+              <span class="ev-row-day">Sábado</span>
+              <span class="ev-row-desc">Live Band · Latin Fusion · DJ after</span>
+              <i class="fas fa-guitar ev-row-icon"></i>
+            </div>
+            <div class="ev-row">
+              <span class="ev-row-day">Domingo</span>
+              <span class="ev-row-desc">Brunch Balam · Acústico · Chill</span>
+              <i class="fas fa-sun ev-row-icon"></i>
+            </div>
           </div>
         </div>
       </div>
