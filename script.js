@@ -195,29 +195,10 @@ document.querySelectorAll('.stat-n').forEach(el => statObserver.observe(el));
 /* ---- Menu vertical swipe ---- */
 (function initCarousel() {
   const carousel   = document.getElementById('igCarousel');
-  const prevBtn    = document.getElementById('igPrev');
-  const nextBtn    = document.getElementById('igNext');
   const highlights = document.querySelectorAll('#igHighlights .ig-highlight');
-  if (!carousel || !prevBtn || !nextBtn) return;
+  if (!carousel) return;
 
   const posts = Array.from(carousel.querySelectorAll('.ig-post'));
-
-  /* Scroll by one slide height */
-  function scrollByOne(dir) {
-    const visible = posts.find(p => p.style.display !== 'none');
-    if (!visible) return;
-    carousel.scrollBy({ top: dir * visible.offsetHeight, behavior: 'smooth' });
-  }
-  prevBtn.addEventListener('click', () => scrollByOne(-1));
-  nextBtn.addEventListener('click', () => scrollByOne(1));
-
-  /* Keep arrow states in sync */
-  function syncArrows() {
-    prevBtn.disabled = carousel.scrollTop < 2;
-    nextBtn.disabled = carousel.scrollTop >= carousel.scrollHeight - carousel.offsetHeight - 2;
-  }
-  carousel.addEventListener('scroll', syncArrows, { passive: true });
-  syncArrows();
 
   /* Category filter — fade out, swap visible posts, reset scroll, fade in */
   highlights.forEach(hl => {
@@ -235,7 +216,6 @@ document.querySelectorAll('.stat-n').forEach(el => statObserver.observe(el));
         });
         carousel.scrollTop = 0;
         carousel.style.opacity = '1';
-        syncArrows();
       }, 200);
     });
   });
