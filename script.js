@@ -83,8 +83,7 @@ const sectionObserver = new IntersectionObserver(entries => {
     if (!entry.isIntersecting) return;
     const id = entry.target.id;
     navAnchors.forEach(a => {
-      const isActive = a.getAttribute('href') === `#${id}`;
-      a.style.color = isActive ? 'var(--text)' : '';
+      a.classList.toggle('active', a.getAttribute('href') === `#${id}`);
     });
   });
 }, { threshold: 0.45 });
@@ -126,3 +125,55 @@ imgs.forEach(el => {
   };
   img.src = url.replace(/url\(['"]?|['"]?\)/g, '');
 });
+
+/* ---- Hero title letter stagger ---- */
+(function initHeroLetters() {
+  const main = document.querySelector('.ht-main');
+  const sub  = document.querySelector('.ht-sub');
+  if (!main || !sub) return;
+
+  revealObserver.unobserve(main);
+  revealObserver.unobserve(sub);
+  main.classList.remove('reveal');
+  sub.classList.remove('reveal');
+
+  const mainLen = [...main.textContent.trim()].length;
+
+  const splitLetters = (el, baseDelay) => {
+    const chars = [...el.textContent.trim()];
+    el.innerHTML = chars.map((ch, i) =>
+      `<span class="hl" style="--delay:${(baseDelay + i * 0.06).toFixed(2)}s">${ch}</span>`
+    ).join('');
+  };
+
+  splitLetters(main, 0.25);
+  splitLetters(sub,  0.25 + mainLen * 0.06 + 0.1);
+})();
+
+/* ---- Stat counter animation ---- */
+function countUp(el, target, decimals, suffix, duration) {
+  let startTime = null;
+  const step = ts => {
+    if (!startTime) startTime = ts;
+    const p = Math.min((ts - startTime) / duration, 1);
+    const v = target * (1 - Math.pow(1 - p, 3));
+    el.textContent = v.toFixed(decimals) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    if (el.textContent.includes('★')) {
+      countUp(el, 4.4, 1, '★', 1200);
+    } else {
+      countUp(el, parseInt(el.textContent, 10), 0, '', 900);
+    }
+    statObserver.unobserve(el);
+  });
+}, { threshold: 0.6 });
+
+document.querySelectorAll('.stat-n').forEach(el => statObserver.observe(el));
