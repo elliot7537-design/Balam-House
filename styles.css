@@ -5,22 +5,22 @@
 
 /* ---- Custom Properties ---- */
 :root {
-  --bg:       #0a0b14;
-  --bg2:      #0f1020;
-  --bg3:      #161830;
-  --card:     #1e2040;
-  --orange:   #C9923A;
-  --orange-l: #DFB060;
-  --red:      #C44055;
-  --cream:    #F5EAD5;
-  --cream-d:  #CCB898;
-  --pink:     #FF5577;
-  --green:    #3DCCAA;
-  --text:     #EDF0F7;
-  --text-d:   #8890A8;
-  --text-m:   #586078;
-  --border:   rgba(180,130,45,0.24);
-  --border-l: rgba(180,130,45,0.42);
+  --bg:       #000000;
+  --bg2:      #030c1a;
+  --bg3:      #071527;
+  --card:     #0d2040;
+  --orange:   #4488cc;
+  --orange-l: #5599dd;
+  --red:      #cc3344;
+  --cream:    #ffffff;
+  --cream-d:  #aabbcc;
+  --pink:     #ee5577;
+  --green:    #33ccaa;
+  --text:     #ffffff;
+  --text-d:   #8899bb;
+  --text-m:   #556677;
+  --border:   rgba(100,150,220,0.20);
+  --border-l: rgba(100,150,220,0.35);
 }
 
 /* ---- Reset ---- */
